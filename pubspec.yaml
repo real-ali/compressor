@@ -1,7 +1,6 @@
 name: compressor
 description: A Dart package for compressing videos using FFmpeg and H.264 codec.
 version: 1.0.0
-author: Sayed Ali sina Hussaini sayedalisinahussaini@icloud.com
 homepage: https://github.com/real-ali/compressor
 repository: https://github.com/real-ali/compressor
 issue_tracker: https://github.com/real-ali/compressor/issues

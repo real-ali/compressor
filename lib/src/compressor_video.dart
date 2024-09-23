@@ -24,7 +24,7 @@ class Compressor {
     // Placeholder for actual compression logic
     // Perform compression and save the result
 
-    return "Congratulations! Your video has been compressed.";
+    return "$byte Congratulations! Your video has been compressed.";
   }
 
   Compressor determineVideoSource() {
