@@ -8,31 +8,30 @@ class Compressor {
       : _path = path,
         _isLocal = isLocal;
 
-  bool? getIsLocal() {
-    return _isLocal;
+  bool? get isLocal => _isLocal;
+
+  String? get path => _path;
+
+  String compressVideo() {
+    if (_path == null) {
+      throw Exception("Path is null!");
+    }
+
+    // Simulate the video compression logic here
+    // For example, you can integrate an actual video compression library
+    final byte = File(_path).readAsBytesSync();
+
+    // Placeholder for actual compression logic
+    // Perform compression and save the result
+
+    return "Congratulations! Your video has been compressed.";
   }
 
-  String? getPath() {
-    return _path;
-  }
-
-  String result() {
-    final byte = File(_path!).readAsBytesSync();
-    return "Congratulation:) Your video compressed";
-  }
-
-  Compressor setIsLocal(bool isLocal) {
-    return Compressor(path: _path, isLocal: isLocal);
-  }
-
-  Compressor setPath(String path) {
-    return Compressor(path: path, isLocal: _isLocal);
-  }
-
-  Compressor vidoe() {
+  Compressor determineVideoSource() {
     try {
       late Compressor compressor;
-      if (_path == null) throw "path is null!";
+      if (_path == null) throw Exception("Path is null!");
+
       if (_isLocal == false ||
           _path.startsWith("http") ||
           _path.startsWith("https")) {
@@ -44,5 +43,13 @@ class Compressor {
     } catch (e) {
       rethrow;
     }
+  }
+
+  Compressor setIsLocal(bool isLocal) {
+    return Compressor(path: _path, isLocal: isLocal);
+  }
+
+  Compressor setPath(String path) {
+    return Compressor(path: path, isLocal: _isLocal);
   }
 }
