@@ -1,0 +1,18 @@
+name: compressor
+description: A Dart package for compressing videos using FFmpeg and H.264 codec.
+version: 1.0.0
+homepage: https://github.com/real-ali/compressor
+repository: https://github.com/real-ali/compressor
+issue_tracker: https://github.com/real-ali/compressor/issues
+documentation: https://pub.dev/documentation/compressor/latest/
+
+environment:
+  sdk: ^3.4.1
+
+# Add regular dependencies here.
+dependencies:
+  # path: ^1.8.0
+
+dev_dependencies:
+  lints: ^3.0.0
+  test: ^1.24.0
